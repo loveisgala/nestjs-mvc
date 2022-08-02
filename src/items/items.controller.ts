@@ -10,7 +10,10 @@ import {
 import { ItemsService } from './items.service';
 import { CreateItemDto } from './dto/create-item.dto';
 import { UpdateItemDto } from './dto/update-item.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+// @ApiTags orders controllers by tags in documentation
+@ApiTags('items')
 @Controller('items') // http://localhost:3000/items
 export class ItemsController {
   constructor(private readonly itemsService: ItemsService) {}
